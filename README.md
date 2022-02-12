@@ -25,13 +25,15 @@ The `process_data_from_ena` directory contains:
   - `cat_files.pl`: script called by `run_humann.sh` to concatenate forward and reverse read files together
  
 ## R scripts
-The `R_scripts` directory contains the R files for the alpha and beta diversity analyses, the random forest classifier, and the patient similarity network.
+The `R_scripts` directory contains the R files for the alpha and beta diversity analyses, the random forest classifier, and the patient similarity network. It also contains the R script used to adjust HUMANnN3 output for batch effect.
 - `alpha_and_beta_diversity.R`: performs alpha and beta diversity analyses, as well as batch effect correction; and plots the corresponding figures
 - for the **random forest**:
   - `randomForest_preprocessing.R`: filters species with low abundances, correlated features and performs CLR transformation on the data
   - `randomForest_tuning.R`: tries different configurations for the model and obtains hyperparameter tuning and ROC curves figures 
   - `randomForest_finalModel.R`: trains the final model, plots the ROC curves and the heatmap
   - `randomForest_validation.R`: validates the data on the CRC dataset (validation on the celiac disease cohort follows the same structure)
+- `patient_similarity_network.R` contains all the code used to generate and analyze the **patient similarity network**
+- `adjust_pathways_mmuphin.R`: R script used to adjust pathway abundances and coverage files for batch effect with MMUPHin
 
 ## CRC LEfSe
 The `LEfSe_CRC` directory contains two files:
