@@ -12,13 +12,14 @@ Scripts used to analyze the metagenomic data, build the random forest classifier
 This directory contains the scripts used to preprocess the raw reads and for taxonomic and functional profiling.
 - `samples_from_ENA.txt`: text file containing the project ID, the sample ID and the subject ID for all samples downloaded from the European Nucleotide Archive at EMBL-EBI
 - `adjusted_abundances.txt`: relative abundances table for the 356 samples after batch effect adjustment
+- `adjusted_pathabundance.tsv`, `adjusted_pathcoverage.tsv`: pathway abundances and coverages files obtained by HUMAnN3 after batch effect correction and formatted for STAMP software
 
 **NOTE:** the celiac disease cohort and the WGS CRC cohort are unavailable, as the data have not been published.
 
 ## Taxonomic and functional profiling
 The `process_data_from_ena` directory contains:
 - `metawrap_and_metaphlan.sh`: bash script used for preprocessing and for obtaining the relative abundances table
-  - `metaphlan-script.pl`: script called by the `metawrap_and_metaphlan.sh` pipeline to run MetaPhlAn on the raw reads
+  - `metaphlan-script.pl`: script called by the `metawrap_and_metaphlan.sh` pipeline to run MetaPhlAn3 on the raw reads
   - `concatenator.sh`: helper script that concatenates reads from the same subject into a single file
 - `run_humann.sh`: script for functional profiling 
   - `cat_files.pl`: script called by `run_humann.sh` to concatenate forward and reverse read files together
