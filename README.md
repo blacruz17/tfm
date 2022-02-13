@@ -10,7 +10,7 @@ Scripts used to analyze the metagenomic data, build the random forest classifier
 
 ## Data directory
 This directory contains the scripts used to preprocess the raw reads and for taxonomic and functional profiling.
-- `samples_from_ENA.txt`: text file containing the project ID, the sample ID and the subject ID for all samples downloaded from the European Nucleotide Archive at EMBL-EBI
+- `samples_from_ENA.txt`: text file containing the project ID, the sample ID and the subject ID for all samples downloaded from the [European Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/home) at EMBL-EBI
 - `adjusted_abundances.txt`: relative abundances table for the 356 samples after batch effect adjustment
 - `adjusted_pathabundance.tsv`, `adjusted_pathcoverage.tsv`: pathway abundances and coverages files obtained by HUMAnN3 after batch effect correction and formatted for STAMP software
 
