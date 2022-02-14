@@ -347,9 +347,12 @@ export_cytoscape <- function(comm, graph, dist_matrix, path){
 #   export_cytoscape(community, ig, clr_dist_matrix, filepath)
 # }
 
-# and the metadata file:
-# write.table(metadata.ig, file = 'DATA/cytoscape/metadata.csv',
-#               quote = FALSE, sep = ',', row.names = FALSE, col.names = TRUE)
+# and save the metadata file:
+# metadata.save <- metadata.ig %>% 
+#                   select(-c(subject_id, sample_id)) %>%
+#                   rownames_to_column('sample_id')
+# write.table(metadata.save, file = 'DATA/cytoscape/metadata.csv',
+#             quote = FALSE, sep = ',', row.names = FALSE, col.names = TRUE)
 
 # Network analysis -----
 ## Degree distribution ----
