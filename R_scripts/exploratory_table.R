@@ -233,6 +233,19 @@ df.metahit <- df.mh %>%
               bind_rows(df.t2d)
 
 ## Summary table ----
+df.all <- df.feng %>%
+          mutate(country = "Austria") %>%
+          bind_rows(df.karl %>% mutate(country = "Sweden"), 
+                    df.metahit %>% mutate(country = "Denmark"))
+
+save.metadata <- df.all %>% 
+                  select(study_name, group, metab, obesity_status, 
+                         sex, age,  bmi, tg_mg_l, study_condition, 
+                         hdl_mg_l, fasting_glucose_mg_l) %>% 
+                  tibble::rownames_to_column('sample_id')
+write.table(save.metadata, 'DATA/metadata.txt', sep = '\t',
+            row.names = FALSE, col.names = TRUE, quote = FALSE)
+			
 mytable <- df.all %>%
             select(group, age, sex, bmi,
                    hdl_mmol_l, fasting_glucose_mmol_l, triglycerides_mmol_l) %>%

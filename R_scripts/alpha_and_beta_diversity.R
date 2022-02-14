@@ -781,7 +781,3 @@ saveRDS(adjusted_phyloseq, 'DATA/adjusted_phyloseq.RDS')
 # save relative abundances table:
 write.table(tab.save, 'DATA/adjusted_abundances.txt',
             quote = FALSE, sep = '\t', row.names = TRUE, col.names = TRUE)
-# save metadata table:
-write.table(merged_metadata, 
-            'DATA/merged_metadata.txt',
-            quote = FALSE, sep = '\t', row.names = TRUE, col.names = TRUE)
