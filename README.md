@@ -36,7 +36,7 @@ The `R_scripts` directory contains the R files for the alpha and beta diversity 
   - `randomForest_tuning.R`: tries different configurations for the model and obtains hyperparameter tuning and ROC curves figures 
   - `randomForest_finalModel.R`: trains the final model, plots the ROC curves and the heatmap
   - `randomForest_validation.R`: validates the data on the CRC dataset (validation on the celiac disease cohort follows the same structure)
-- `patient_similarity_network.R` contains all the code used to generate and analyze the **patient similarity network**
+- `patient_similarity_network.R` contains all the code used to generate and analyze the patient similarity network
 - `adjust_pathways_mmuphin.R`: R script used to adjust pathway abundances and coverage files for batch effect with MMUPHin
 
 ## CRC LEfSe
