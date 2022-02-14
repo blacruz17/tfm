@@ -32,7 +32,7 @@ The `process_data_from_ena` directory contains:
 The `R_scripts` directory contains the R files for the alpha and beta diversity analyses, the random forest classifier, and the patient similarity network. It also contains the R script used to adjust HUMANnN3 output for batch effect.
 - `alpha_and_beta_diversity.R`: performs alpha and beta diversity analyses, as well as batch effect correction; and plots the corresponding figures
   - **_Note:_** this script uses files obtained from the online version of the source papers, as well as intermediate files obtained with MetaPhlAn for the MetaHit subjects. The final species table and metadata table are available in the `DATA/` directory.
-- for the **random forest**:
+- random forest scripts:
   - `randomForest_preprocessing.R`: filters species with low abundances, correlated features and performs CLR transformation on the data
   - `randomForest_tuning.R`: tries different configurations for the model and obtains hyperparameter tuning and ROC curves figures 
   - `randomForest_finalModel.R`: trains the final model, plots the ROC curves and the heatmap
