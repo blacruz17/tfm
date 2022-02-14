@@ -13,6 +13,7 @@ This directory contains the scripts used to preprocess the raw reads and for tax
 - `samples_from_ENA.txt`: text file containing the project ID, the sample ID and the subject ID for all samples downloaded from the [European Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/home) at EMBL-EBI
 - `adjusted_abundances.txt`: relative abundances table for the 356 samples after batch effect adjustment
 - `merged_metadata.txt`: metadata table
+- `adjusted_phyloseq.RDS`: phyloseq object used for the analyses
 - `adjusted_pathabundance.tsv`, `adjusted_pathcoverage.tsv`: pathway abundances and coverages files obtained by HUMAnN3 after batch effect correction and formatted for STAMP software
 - `cytoscape/`: directory with the input files for Cytoscape, generated with the `R_scripts/patient_similarity_network.R` script
 - `randomForest/`: directory with the input files for the random forest model and three binary files (the best model, its training data, and the ROC curve after validation in the CRC dataset)
