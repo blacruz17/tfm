@@ -17,7 +17,7 @@ This directory contains the scripts used to preprocess the raw reads and for tax
 - `cytoscape/`: directory with the input files for Cytoscape, generated with the `R_scripts/patient_similarity_network.R` script
 - `randomForest/`: directory with the input files for the random forest model and three binary files (the best model, its training data, and the ROC curve after validation in the CRC dataset)
 
-**NOTE:** the celiac disease cohort and the WGS CRC cohort are unavailable, as the data have not been published.
+**_Note:_** the celiac disease cohort and the WGS CRC cohort are unavailable, as the data have not been published.
 
 ## Taxonomic and functional profiling
 The `process_data_from_ena` directory contains:
